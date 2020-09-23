@@ -56,13 +56,13 @@ plink2 \
 	--missing-code -9 \
 	--exclude $unmapped \
 	--update-map $mappingUpdate \
-	--export haps \
+	--sort-vars \
+	--make-pgen \
 	--out $unSorted
 
-# Sort position per chromosome
+# Convert back to .haps/.sample
 plink2 \
-	--haps $unSorted.haps \
-	--sample $unSorted.sample \
+	--pfile $unSorted \
 	--export haps \
 	--out $output
 
