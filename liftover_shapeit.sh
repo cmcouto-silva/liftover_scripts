@@ -70,4 +70,4 @@ plink2 \
 cp "${sample}" "${output}.sample"
 
 # Remove temporary files
-#rm -r $tmp
+rm -r $tmp
