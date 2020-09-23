@@ -31,6 +31,7 @@ input_bed="${tmp}/input.bed"
 output_bed="${tmp}/output.bed"
 unmapped="${tmp}/unmapped.txt"
 mappingUpdate="${tmp}/mappingUpdate.txt"
+unSorted="${tmp}/unSorted"
 
 # Create bed
 awk '{print "chr"$1,$4,$4+1,$2}' OFS="\t" "${input}.bim" > $input_bed
@@ -45,10 +46,17 @@ awk '/^[^#]/ {print $4}' $unmapped > ${unmapped}.tmp && mv ${unmapped}.tmp $unma
 awk '{print $4, $2}' OFS="\t" $output_bed > $mappingUpdate
 
 # Update plink mappings
-plink \
+plink2 \
 	--bfile $input \
 	--exclude $unmapped \
 	--update-map $mappingUpdate \
+	--sort-vars \
+	--make-pgen \
+	--out $unSorted
+
+# Sort base pairs to binary ped
+plink2 \
+	--pfile $unSorted \
 	--make-bed \
 	--out $output
 
