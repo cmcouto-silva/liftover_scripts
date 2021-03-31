@@ -2,7 +2,13 @@
 
 Slightly modified script from [Patrick Deelen][liftover.script] for conversion between genomic builds (physical positions).
 
-##### Requirements:
+#### Requirements:
+
+    liftover_plink input output chain_file
+    
+where `input` is the plink data without extensions, `output` the desired base name for the output, and `chain_file` the chain file obtained from [here][liftover.files] (_e.g._ hg19ToHg38.over.chain.gz).
+
+#### Requirements:
 - [LiftOver files,][liftover.files]
 - [LiftOver Software][liftover.download],
 - [Plink Software (version => 1.9)][plink]
