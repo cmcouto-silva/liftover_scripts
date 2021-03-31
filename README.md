@@ -1,6 +1,6 @@
 ### LiftOver Conversion Script
 
-Slightly modified script from [Patrick Deelen][liftover.script] for converting genomic build (positions) to another.
+Slightly modified script from [Patrick Deelen][liftover.script] for conversion between genomic builds (physical positions).
 
 ##### Requirements:
 - [LiftOver files,][liftover.files]
