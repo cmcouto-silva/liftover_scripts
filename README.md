@@ -7,6 +7,8 @@ Slightly modified script from [Patrick Deelen][liftover.script] for conversion b
 - [LiftOver Software][liftover.download],
 - [Plink Software (version => 1.9)][plink]
 
+[plink]: <https://www.cog-genomics.org/plink2>
+
 [liftover.script]: <https://github.com/molgenis/Imputation/issues/4>
 [liftover.files]: <http://hgdownload.cse.ucsc.edu/downloads.html>
 [liftover.download]: <http://hgdownload.soe.ucsc.edu/admin/exe/>
