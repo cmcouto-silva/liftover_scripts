@@ -2,7 +2,7 @@
 
 Slightly modified script from [Patrick Deelen][liftover.script] for conversion between genomic build (physical positions).
 
-#### Requirements:
+#### Usage:
 
     liftover_plink input output chain_file
     
